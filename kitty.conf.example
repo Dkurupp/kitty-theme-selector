@@ -1,0 +1,568 @@
+# Kitty config: all options with default values.
+# Your overrides are at the end (theme include, allow_remote_control, etc.).
+# Edit values below or add new options at the end.
+
+# font_family: Main font. Use font name or run kitten choose-fonts for UI.
+font_family monospace
+# bold_font: Bold variant. auto = derive from font_family, or font name.
+bold_font auto
+# italic_font: Italic variant. auto = derive from font_family, or font name.
+italic_font auto
+# bold_italic_font: Bold-italic variant. auto or font name.
+bold_italic_font auto
+# font_size: Size in pts (e.g. 11.0, 14).
+font_size 11.0
+# force_ltr: yes = always left-to-right (disables RTL shaping).
+force_ltr no
+# symbol_map: Map Unicode codepoints to a font. Syntax: U+E0A0-U+E0A3 FontName
+symbol_map
+# narrow_symbols: Restrict codepoints to N cells. Syntax: U+E0A0 1
+narrow_symbols
+# disable_ligatures: never | cursor (disable over cursor) | always
+disable_ligatures never
+# font_features: OpenType features. Syntax: FontPostScriptName +feature -feature
+font_features
+# modify_font: Modify underline/cell. E.g. underline_position -2, cell_width 80%
+modify_font
+# box_drawing_scale: Four values for thin, normal, thick, very thick lines (pts).
+box_drawing_scale 0.001, 1, 1.5, 2
+# undercurl_style: (thin|thick)-(sparse|dense)
+undercurl_style thin-sparse
+# underline_exclusion: Gap thickness for descenders. 0 = no gaps. Number or px/pt.
+underline_exclusion 1
+# text_composition_strategy: platform | legacy | or two numbers (gamma, contrast%)
+text_composition_strategy platform
+# text_fg_override_threshold: Min contrast. 0 = off, or e.g. 4.5ratio or 20%
+text_fg_override_threshold 0
+# cursor: Cursor color (#hex, or none for reverse video).
+cursor #cccccc
+# cursor_text_color: Text color under cursor. #hex or keyword "background"
+cursor_text_color #111111
+# cursor_shape: block | beam | underline
+cursor_shape block
+# cursor_shape_unfocused: block | beam | underline | hollow | unchanged
+cursor_shape_unfocused hollow
+# cursor_beam_thickness: Beam cursor thickness in pts.
+cursor_beam_thickness 1.5
+# cursor_underline_thickness: Underline cursor thickness in pts.
+cursor_underline_thickness 2.0
+# cursor_blink_interval: Seconds; -1 = system default, 0 = no blink. Can add easing.
+cursor_blink_interval -1
+# cursor_stop_blinking_after: Seconds of inactivity before stopping blink. 0 = never.
+cursor_stop_blinking_after 15.0
+# cursor_trail: Enable trail. Value = min ms cursor must stay to trigger trail.
+cursor_trail 0
+# cursor_trail_decay: Two floats: min and max decay time in seconds.
+cursor_trail_decay 0.1 0.4
+# cursor_trail_start_threshold: Min cells cursor must move to start trail.
+cursor_trail_start_threshold 2
+# cursor_trail_color: #hex, named color, or none (use cursor color).
+cursor_trail_color none
+# scrollback_lines: Lines to keep. Negative = effectively infinite.
+scrollback_lines 2000
+# scrollbar: when to show. scrolled | hovered | scrolled-and-hovered | always | never
+scrollbar scrolled
+# scrollbar_interactive: yes = mouse can control scrollbar.
+scrollbar_interactive yes
+# scrollbar_jump_on_click: yes = click track jumps to position; no = one screenful.
+scrollbar_jump_on_click yes
+# scrollbar_width: Width in units of cell width.
+scrollbar_width 0.5
+# scrollbar_hover_width: Width when hovering, in cell units.
+scrollbar_hover_width 1
+# scrollbar_handle_opacity: 0 = transparent, 1 = opaque.
+scrollbar_handle_opacity 0.5
+# scrollbar_radius: Handle corner radius in cell width.
+scrollbar_radius 0.3
+# scrollbar_gap: Gap between scrollbar and window edge (cell width).
+scrollbar_gap 0.1
+# scrollbar_min_handle_height: Min handle height in cell height.
+scrollbar_min_handle_height 1
+# scrollbar_hitbox_expansion: Extra grab area around handle (cell width).
+scrollbar_hitbox_expansion 0.25
+# scrollbar_track_opacity: 0–1.
+scrollbar_track_opacity 0
+# scrollbar_track_hover_opacity: 0–1 when hovering scrollbar.
+scrollbar_track_hover_opacity 0.1
+# scrollbar_handle_color: foreground | selection_background | #hex | named
+scrollbar_handle_color foreground
+# scrollbar_track_color: foreground | selection_background | #hex | named
+scrollbar_track_color foreground
+# scrollback_pager: Command to view scrollback. INPUT_LINE_NUMBER/CURSOR_* replaced.
+scrollback_pager less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER
+# scrollback_pager_history_size: MB for pager buffer. 0 = disabled.
+scrollback_pager_history_size 0
+# scrollback_fill_enlarged_window: yes = fill new space with scrollback when enlarging.
+scrollback_fill_enlarged_window no
+# wheel_scroll_multiplier: Lines per wheel step. Negative = reverse direction.
+wheel_scroll_multiplier 5.0
+# wheel_scroll_min_lines: Min lines per wheel event (for low-precision devices).
+wheel_scroll_min_lines 1
+# touch_scroll_multiplier: For touchpad/high-precision. Negative = reverse.
+touch_scroll_multiplier 1.0
+# mouse_hide_wait: Seconds before hiding cursor; 0 = never; negative = hide when typing.
+mouse_hide_wait 3.0
+# url_color: Color for URL underline/highlight. #hex or named.
+url_color #0087bd
+# url_style: none | straight | double | curly | dotted | dashed
+url_style curly
+# open_url_with: default | program name (e.g. xdg-open, firefox)
+open_url_with default
+# url_prefixes: Space-separated URL schemes to detect.
+url_prefixes file ftp ftps gemini git gopher http https irc ircs kitty mailto news sftp ssh
+# detect_urls: yes | no — highlight/underline URLs under cursor.
+detect_urls yes
+# url_excluded_characters: Extra chars disallowed in URLs. \n disables newline in URLs.
+url_excluded_characters
+# show_hyperlink_targets: yes = show URL on hover for OSC 8 links.
+show_hyperlink_targets no
+# underline_hyperlinks: hover | always | never
+underline_hyperlinks hover
+# copy_on_select: no | clipboard | or buffer name (e.g. a1)
+copy_on_select no
+# clear_selection_on_clipboard_loss: yes = clear selection when clipboard changes.
+clear_selection_on_clipboard_loss no
+# paste_actions: Comma list: quote-urls-at-prompt, confirm, confirm-if-large, filter, etc.
+paste_actions quote-urls-at-prompt,confirm
+# strip_trailing_spaces: never | smart (not for rectangle) | always
+strip_trailing_spaces never
+# select_by_word_characters: Chars treated as part of word for double-click.
+select_by_word_characters @-./_~?&=%+#
+# select_by_word_characters_forward: Same for extending selection forward. Empty = use above.
+select_by_word_characters_forward
+# click_interval: Seconds for double/triple click. -1 = system default.
+click_interval -1.0
+# focus_follows_mouse: yes = focus window under cursor on move.
+focus_follows_mouse no
+# pointer_shape_when_grabbed: arrow | beam | crosshair | text | etc. (CSS cursor names)
+pointer_shape_when_grabbed arrow
+# default_pointer_shape: arrow | beam | crosshair | text | pointer | wait | etc.
+default_pointer_shape beam
+# pointer_shape_when_dragging: Single shape: beam | crosshair | text | etc.
+pointer_shape_when_dragging beam
+# clear_all_mouse_actions: yes = remove all mouse_map definitions above this line.
+clear_all_mouse_actions no
+# mouse_map: button event modes action — button: left|middle|right|b1..b8 + mods; event: press|release|doublepress|click|etc; modes: grabbed|ungrabbed
+mouse_map left click ungrabbed mouse_handle_click selection link prompt
+mouse_map shift+left click grabbed,ungrabbed mouse_handle_click selection link prompt
+mouse_map ctrl+shift+left release grabbed,ungrabbed mouse_handle_click link
+mouse_map ctrl+shift+left press grabbed discard_event
+mouse_map middle release ungrabbed paste_from_selection
+mouse_map left press ungrabbed mouse_selection normal
+mouse_map ctrl+alt+left press ungrabbed mouse_selection rectangle
+mouse_map left doublepress ungrabbed mouse_selection word
+mouse_map left triplepress ungrabbed mouse_selection line
+mouse_map ctrl+alt+left triplepress ungrabbed mouse_selection line_from_point
+mouse_map right press ungrabbed mouse_selection extend
+mouse_map shift+middle release ungrabbed,grabbed paste_selection
+mouse_map shift+middle press grabbed discard_event
+mouse_map shift+left press ungrabbed,grabbed mouse_selection normal
+mouse_map ctrl+shift+alt+left press ungrabbed,grabbed mouse_selection rectangle
+mouse_map shift+left doublepress ungrabbed,grabbed mouse_selection word
+mouse_map shift+left triplepress ungrabbed,grabbed mouse_selection line
+mouse_map ctrl+shift+alt+left triplepress ungrabbed,grabbed mouse_selection line_from_point
+mouse_map shift+right press ungrabbed,grabbed mouse_selection extend
+mouse_map ctrl+shift+right press ungrabbed mouse_show_command_output
+# repaint_delay: ms between screen updates. Lower = higher FPS, more CPU.
+repaint_delay 10
+# input_delay: ms before processing input. Lower = more responsive, may flicker.
+input_delay 3
+# sync_to_monitor: yes = vsync (no tearing); no = uncapped FPS.
+sync_to_monitor yes
+# enable_audio_bell: yes | no
+enable_audio_bell yes
+# visual_bell_duration: Seconds to flash screen on bell. 0 = disabled. Can add easing.
+visual_bell_duration 0.0
+# visual_bell_color: #hex, named, or none (use selection background).
+visual_bell_color none
+# window_alert_on_bell: yes = bounce/flash window on bell.
+window_alert_on_bell yes
+# bell_on_tab: Text/symbol shown on tab when bell in unfocused window. "" = none.
+bell_on_tab "🔔 "
+# command_on_bell: Program to run on bell. KITTY_CHILD_CMDLINE available.
+command_on_bell none
+# bell_path: Path to sound file (WAV/OGA etc) or none for system default.
+bell_path none
+# linux_bell_theme: XDG sound theme name. __custom = use custom theme from spec.
+linux_bell_theme __custom
+# remember_window_size: yes = restore last OS window size on new instance.
+remember_window_size yes
+# initial_window_width: Pixels, or Nc for N cells (when remember_window_size no).
+initial_window_width 640
+# initial_window_height: Pixels or Nc (when remember_window_size no).
+initial_window_height 400
+# remember_window_position: yes = restore last position (not on Wayland).
+remember_window_position no
+# enabled_layouts: Comma list of layout names, or * or all.
+enabled_layouts *
+# window_resize_step_cells: Cells to resize per step (horizontal).
+window_resize_step_cells 2
+# window_resize_step_lines: Lines to resize per step (vertical).
+window_resize_step_lines 2
+# window_border_width: Width in px or pt (e.g. 0.5pt).
+window_border_width 0.5pt
+# draw_minimal_borders: yes = only borders between windows.
+draw_minimal_borders yes
+# draw_window_borders_for_single_window: yes = draw border when only one window.
+draw_window_borders_for_single_window no
+# window_margin_width: Margin in pts. 1–4 values: all | v h | t h b | t r b l.
+window_margin_width 0
+# single_window_margin_width: Margin when single window. -1 = use window_margin_width.
+single_window_margin_width -1
+# window_padding_width: Padding inside border (pts). 1–4 values like margin.
+window_padding_width 0
+# single_window_padding_width: Padding when single window. -1 = use window_padding_width.
+single_window_padding_width -1
+# placement_strategy: top-left|top|top-right|left|center|right|bottom-left|bottom|bottom-right
+placement_strategy center
+# active_border_color: #hex, named, or none.
+active_border_color #00ff00
+# inactive_border_color: #hex or named.
+inactive_border_color #cccccc
+# bell_border_color: Border color when bell in inactive window.
+bell_border_color #ff5a00
+# inactive_text_alpha: 0–1; fade text in inactive windows.
+inactive_text_alpha 1.0
+# hide_window_decorations: yes | no (macOS: titlebar-only, titlebar-and-corners).
+hide_window_decorations no
+# window_logo_path: Path to PNG/JPEG etc, or none.
+window_logo_path none
+# window_logo_position: top-left|top|top-right|left|center|right|bottom-left|bottom|bottom-right
+window_logo_position bottom-right
+# window_logo_alpha: 0 = faded, 1 = opaque.
+window_logo_alpha 0.5
+# window_logo_scale: 0 = no scale; 1–100 = % of window; two numbers = width% height%.
+window_logo_scale 0
+# resize_debounce_time: Two floats: min and max debounce time in seconds.
+resize_debounce_time 0.1 0.5
+# resize_in_steps: yes = resize by cell when using shortcut.
+resize_in_steps no
+# visual_window_select_characters: Chars shown for window select (e.g. 1–9, A–Z).
+visual_window_select_characters 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# confirm_os_window_close: -1 = never, 0 = always, N = if N+ tabs/windows.
+confirm_os_window_close -1
+# tab_bar_edge: top | bottom
+tab_bar_edge top
+# tab_bar_margin_width: Margin in pts.
+tab_bar_margin_width 1.0
+# tab_bar_margin_height: Two values: top bottom (pts).
+tab_bar_margin_height 0.0 0.0
+# tab_bar_style: fade | slant | custom | separator | powerline | hidden
+tab_bar_style fade
+# tab_bar_filter: Regex to filter tab titles. Syntax: regex replacement
+tab_bar_filter
+# tab_bar_align: left | center | right
+tab_bar_align left
+# tab_bar_min_tabs: Min tabs before bar shown.
+tab_bar_min_tabs 2
+# tab_switch_strategy: previous | left | right | last_used
+tab_switch_strategy previous
+# tab_fade: Four 0–1 values for gradient stops.
+tab_fade 0.25 0.5 0.75 1
+# tab_separator: String between tabs.
+tab_separator " ┇"
+# tab_powerline_style: angled | round | slanted (for powerline style).
+tab_powerline_style angled
+# tab_activity_symbol: Symbol for activity in tab, or none.
+tab_activity_symbol none
+# tab_title_max_length: Max title length; 0 = no limit.
+tab_title_max_length 0
+# tab_title_template: Format string. See docs for {fmt.fg.red}, {title}, {bell_symbol}, etc.
+tab_title_template "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{tab.last_focused_progress_percent}{title}"
+# active_tab_title_template: Override for active tab, or none.
+active_tab_title_template none
+# active_tab_foreground: #hex or named.
+active_tab_foreground #000
+# active_tab_background: #hex or named.
+active_tab_background #eee
+# active_tab_font_style: normal | bold | italic | bold-italic
+active_tab_font_style bold-italic
+# inactive_tab_foreground: #hex or named.
+inactive_tab_foreground #444
+# inactive_tab_background: #hex or named.
+inactive_tab_background #999
+# inactive_tab_font_style: normal | bold | italic | bold-italic
+inactive_tab_font_style normal
+# tab_bar_background: #hex, named, or none.
+tab_bar_background none
+# tab_bar_margin_color: #hex, named, or none.
+tab_bar_margin_color none
+# foreground: Default text color. #hex or named.
+foreground #dddddd
+# background: Default background. #hex or named.
+background #000000
+# background_opacity: 0–1. Requires transparent_background_colors or compositor.
+background_opacity 1.0
+# background_blur: Blur amount (0 = off). May need compositor.
+background_blur 0
+# transparent_background_colors: yes = use transparency for default bg.
+transparent_background_colors
+# dynamic_background_opacity: yes = allow programs to change opacity.
+dynamic_background_opacity no
+# background_image: Path to image, or none.
+background_image none
+# background_image_layout: tiled | mirror-tiled | scaled | clamped | centered
+background_image_layout tiled
+# background_image_linear: yes = linear gradient (use background_image as gradient spec).
+background_image_linear no
+# background_tint: 0–1; tint background.
+background_tint 0.0
+# background_tint_gaps: 0–1; tint gap areas.
+background_tint_gaps 1.0
+# dim_opacity: 0–1; dim inactive window content.
+dim_opacity 0.4
+# selection_foreground: #hex or named.
+selection_foreground #000000
+# selection_background: #hex or named.
+selection_background #fffacd
+# color0–color15: ANSI 0–7 (normal) and 8–15 (bright). #hex or named.
+color0 #000000
+color8 #767676
+color1 #cc0403
+color9 #f2201f
+color2 #19cb00
+color10 #23fd00
+color3 #cecb00
+color11 #fffd00
+color4 #0d73cc
+color12 #1a8fff
+color5 #cb1ed1
+color13 #fd28ff
+color6 #0dcdcd
+color14 #14ffff
+color7 #dddddd
+color15 #ffffff
+# mark1_foreground / mark1_background: Color for mark type 1. #hex or named.
+mark1_foreground black
+mark1_background #98d3cb
+mark2_foreground black
+mark2_background #f2dcd3
+mark3_foreground black
+mark3_background #f274bc
+# shell: Shell to run. . = default. Use "none" for no shell.
+shell .
+# editor: Editor for e.g. edit_config_file. . = $VISUAL or $EDITOR.
+editor .
+# close_on_child_death: yes = close window when child exits.
+close_on_child_death no
+# remote_control_password: Optional password for remote control. Empty = no auth.
+remote_control_password
+# allow_remote_control: yes | no | password (require password).
+allow_remote_control no
+# listen_on: Socket path for remote control, or none | unix:path.
+listen_on none
+# env: Set env var. Syntax: name value (multiple lines ok).
+env
+# filter_notification: Program to filter notifications. See docs.
+filter_notification
+# watcher: Program for file watching. See docs.
+watcher
+# exe_search_path: PATH for finding programs. Default = system PATH.
+exe_search_path
+# update_check_interval: Hours between update checks. 0 = disable.
+update_check_interval 24
+# startup_session: Session name to restore on start, or none.
+startup_session none
+# clipboard_control: write-clipboard, write-primary, read-clipboard, read-primary, etc. (ask = prompt).
+clipboard_control write-clipboard write-primary read-clipboard-ask read-primary-ask
+# clipboard_max_size: Max paste size in MB.
+clipboard_max_size 512
+# file_transfer_confirmation_bypass: Size threshold (bytes) to bypass confirm. Empty = always ask.
+file_transfer_confirmation_bypass
+# allow_hyperlinks: yes | no — allow OSC 8 hyperlinks.
+allow_hyperlinks yes
+# shell_integration: enabled | disabled | no-cursor | no-command-output | no-mark
+shell_integration enabled
+# allow_cloning: yes | no | ask — clone shell env when opening new window.
+allow_cloning ask
+# clone_source_strategies: venv, conda, env_var, path (comma list).
+clone_source_strategies venv,conda,env_var,path
+# notify_on_cmd_finish: never | unfocused | always | 0–N (seconds)
+notify_on_cmd_finish never
+# term: TERM value (e.g. xterm-kitty).
+term xterm-kitty
+# terminfo_type: path | name — how to find terminfo.
+terminfo_type path
+# forward_stdio: yes = forward stdin/stdout to first window.
+forward_stdio no
+# menu_map: Key combo then action (like map). Defines context menu shortcuts.
+menu_map
+# wayland_titlebar_color: system | background (or #hex)
+wayland_titlebar_color system
+# macos_titlebar_color: system | background (or #hex)
+macos_titlebar_color system
+# macos_option_as_alt: yes | no | both — treat Option as Alt.
+macos_option_as_alt no
+# macos_hide_from_tasks: yes | no
+macos_hide_from_tasks no
+# macos_quit_when_last_window_closed: yes | no
+macos_quit_when_last_window_closed no
+# macos_window_resizable: yes | no
+macos_window_resizable yes
+# macos_thicken_font: 0–2; font weight adjustment.
+macos_thicken_font 0
+# macos_traditional_fullscreen: yes | no
+macos_traditional_fullscreen no
+# macos_show_window_title_in: all | window | menubar | none
+macos_show_window_title_in all
+# macos_menubar_title_max_length: Max length; 0 = no limit.
+macos_menubar_title_max_length 0
+# macos_custom_beam_cursor: yes | no
+macos_custom_beam_cursor no
+# macos_colorspace: srgb | display_p3
+macos_colorspace srgb
+# linux_display_server: auto | wayland | x11
+linux_display_server auto
+# wayland_enable_ime: yes | no — input method (e.g. IME).
+wayland_enable_ime yes
+# kitty_mod: Modifier for shortcuts (e.g. ctrl+shift, cmd).
+kitty_mod ctrl+shift
+# clear_all_shortcuts: yes = remove all map/action_alias above this line.
+clear_all_shortcuts no
+# action_alias: name action args — define alias for use in map.
+action_alias
+# kitten_alias: name kitten args — define kitten shortcut.
+kitten_alias
+# map: key_combo action [args] — keyboard shortcut. E.g. map ctrl+a action_name. Use kitty_mod, cmd, ctrl, shift, alt, opt. See kitty docs for actions.
+map kitty_mod+c copy_to_clipboard
+map cmd+c copy_or_noop
+map kitty_mod+v paste_from_clipboard
+map cmd+v       paste_from_clipboard
+map kitty_mod+s  paste_from_selection
+map shift+insert paste_from_selection
+map kitty_mod+o pass_selection_to_program
+map kitty_mod+up    scroll_line_up
+map kitty_mod+k     scroll_line_up
+map opt+cmd+page_up scroll_line_up
+map cmd+up          scroll_line_up
+map kitty_mod+down    scroll_line_down
+map kitty_mod+j       scroll_line_down
+map opt+cmd+page_down scroll_line_down
+map cmd+down          scroll_line_down
+map kitty_mod+page_up scroll_page_up
+map cmd+page_up       scroll_page_up
+map kitty_mod+page_down scroll_page_down
+map cmd+page_down       scroll_page_down
+map kitty_mod+home scroll_home
+map cmd+home       scroll_home
+map kitty_mod+end scroll_end
+map cmd+end       scroll_end
+map kitty_mod+z scroll_to_prompt -1
+map kitty_mod+x scroll_to_prompt 1
+map kitty_mod+h show_scrollback
+map kitty_mod+g show_last_command_output
+map kitty_mod+/ search_scrollback
+map cmd+f       search_scrollback
+map kitty_mod+enter new_window
+map cmd+enter       new_window
+map kitty_mod+n new_os_window
+map cmd+n       new_os_window
+map kitty_mod+w close_window
+map shift+cmd+d close_window
+map kitty_mod+] next_window
+map kitty_mod+[ previous_window
+map kitty_mod+f move_window_forward
+map kitty_mod+b move_window_backward
+map kitty_mod+` move_window_to_top
+map kitty_mod+r start_resizing_window
+map cmd+r       start_resizing_window
+map kitty_mod+1 first_window
+map cmd+1       first_window
+map kitty_mod+2 second_window
+map cmd+2       second_window
+map kitty_mod+3 third_window
+map cmd+3       third_window
+map kitty_mod+4 fourth_window
+map cmd+4       fourth_window
+map kitty_mod+5 fifth_window
+map cmd+5       fifth_window
+map kitty_mod+6 sixth_window
+map cmd+6       sixth_window
+map kitty_mod+7 seventh_window
+map cmd+7       seventh_window
+map kitty_mod+8 eighth_window
+map cmd+8       eighth_window
+map kitty_mod+9 ninth_window
+map cmd+9       ninth_window
+map kitty_mod+0 tenth_window
+map kitty_mod+f7 focus_visible_window
+map kitty_mod+f8 swap_with_window
+map kitty_mod+right next_tab
+map shift+cmd+]     next_tab
+map ctrl+tab        next_tab
+map kitty_mod+left previous_tab
+map shift+cmd+[    previous_tab
+map ctrl+shift+tab previous_tab
+map kitty_mod+t new_tab
+map cmd+t       new_tab
+map kitty_mod+q close_tab
+map cmd+w       close_tab
+map shift+cmd+w close_os_window
+map kitty_mod+. move_tab_forward
+map kitty_mod+, move_tab_backward
+map kitty_mod+alt+t set_tab_title
+map shift+cmd+i     set_tab_title
+map kitty_mod+l next_layout
+map kitty_mod+equal  change_font_size all +2.0
+map kitty_mod+plus   change_font_size all +2.0
+map kitty_mod+kp_add change_font_size all +2.0
+map cmd+plus         change_font_size all +2.0
+map cmd+equal        change_font_size all +2.0
+map shift+cmd+equal  change_font_size all +2.0
+map kitty_mod+minus       change_font_size all -2.0
+map kitty_mod+kp_subtract change_font_size all -2.0
+map cmd+minus             change_font_size all -2.0
+map shift+cmd+minus       change_font_size all -2.0
+map kitty_mod+backspace change_font_size all 0
+map cmd+0               change_font_size all 0
+map kitty_mod+e open_url_with_hints
+map kitty_mod+p>f kitten hints --type path --program -
+map kitty_mod+p>shift+f kitten hints --type path
+map kitty_mod+p>c kitten choose-files
+map kitty_mod+p>d kitten choose-files --mode=dir
+map kitty_mod+p>l kitten hints --type line --program -
+map kitty_mod+p>w kitten hints --type word --program -
+map kitty_mod+p>h kitten hints --type hash --program -
+map kitty_mod+p>n kitten hints --type linenum
+map kitty_mod+p>y kitten hints --type hyperlink
+map kitty_mod+f1 show_kitty_doc overview
+map kitty_mod+f11 toggle_fullscreen
+map ctrl+cmd+f    toggle_fullscreen
+map kitty_mod+f10 toggle_maximized
+map opt+cmd+s toggle_macos_secure_keyboard_entry
+map cmd+` macos_cycle_through_os_windows
+map cmd+shift+` macos_cycle_through_os_windows_backwards
+map kitty_mod+u    kitten unicode_input
+map ctrl+cmd+space kitten unicode_input
+map kitty_mod+f2 edit_config_file
+map cmd+,        edit_config_file
+map kitty_mod+escape kitty_shell window
+map kitty_mod+a>m set_background_opacity +0.1
+map kitty_mod+a>l set_background_opacity -0.1
+map kitty_mod+a>1 set_background_opacity 1
+map kitty_mod+a>d set_background_opacity default
+map kitty_mod+delete clear_terminal reset active
+map opt+cmd+r        clear_terminal reset active
+map cmd+k clear_terminal to_cursor active
+map option+cmd+k clear_terminal scrollback active
+map cmd+l clear_terminal last_command active
+map cmd+ctrl+l clear_terminal to_cursor_scroll active
+map kitty_mod+f5 load_config_file
+map ctrl+cmd+,   load_config_file
+map kitty_mod+f6 debug_config
+map opt+cmd+,    debug_config
+map shift+cmd+/ open_url https://sw.kovidgoyal.net/kitty/
+map cmd+h hide_macos_app
+map opt+cmd+h hide_macos_other_apps
+map cmd+m minimize_macos_window
+map cmd+q quit
+
+# --- Your overrides (from original kitty.conf) ---
+
+# BEGIN_KITTY_THEME
+# Arthur
+include current-theme.conf
+
+allow_remote_control yes
+
+# END_KITTY_THEME
