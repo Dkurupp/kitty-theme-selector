@@ -31,6 +31,20 @@ Or use the helper script (creates `.venv` and installs deps if needed):
 ```bash
 ./changeKittyTheme.sh
 ```
+### Usage Recommendation
+Once setup, Add this script to your .bashrc file, so that its easier to call from any new tab.
+
+```
+export PATH=[path to your changeKittyTheme.sh]:${PATH}
+```
+
+After opening a new Kitty tab / reloading your shell - just use changeKittyTheme to set up new theme everytime
+
+Enjoy !! 
+
+
+
+## How to Navigate 
 
 - **↑ / ↓** — move
 - **Enter** — apply selected theme
