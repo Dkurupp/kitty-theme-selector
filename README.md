@@ -9,6 +9,8 @@ This is added under apache licence, so if anyone is interested to add any more f
 
 ## Setup
 
+Checkout code first. There is just *main* branch
+
 On Debian/Ubuntu (and other PEP 668 systems) use a virtual environment:
 
 ```bash
@@ -41,7 +43,6 @@ export PATH=[path to your changeKittyTheme.sh]:${PATH}
 After opening a new Kitty tab / reloading your shell - just use changeKittyTheme to set up new theme everytime
 
 Enjoy !! 
-
 
 
 ## How to Navigate 
