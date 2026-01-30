@@ -1,5 +1,10 @@
 # Kitty theme selector
 
+Read through article for this on - 
+```
+https://bridgeapps.medium.com/easy-kitty-theme-changer-cb944829b93a
+```
+
 A small TUI to list and apply [kitty](https://sw.kovidgoyal.net/kitty/) themes from `~/.config/kitty` (or `$KITTY_CONFIG_DIRECTORY`).
 
 Kitty is a high performance Terminal with really low CPU usage. 
