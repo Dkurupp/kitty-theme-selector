@@ -2,6 +2,11 @@
 
 A small TUI to list and apply [kitty](https://sw.kovidgoyal.net/kitty/) themes from `~/.config/kitty` (or `$KITTY_CONFIG_DIRECTORY`).
 
+Kitty is a high performance Terminal with really low CPU usage. 
+The problem this plugin solves is to be able to select different color themes to different tabs, easily without having to tweak with a conf file everytime.
+
+This is added under apache licence, so if anyone is interested to add any more features, do feel free to commit, I will review and confirm.
+
 ## Setup
 
 On Debian/Ubuntu (and other PEP 668 systems) use a virtual environment:
@@ -24,7 +29,7 @@ From a kitty tab:
 Or use the helper script (creates `.venv` and installs deps if needed):
 
 ```bash
-./run
+./changeKittyTheme.sh
 ```
 
 - **↑ / ↓** — move
