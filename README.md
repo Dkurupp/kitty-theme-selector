@@ -1,8 +1,20 @@
 # Kitty theme selector
 
+Read through article for this on - 
+```
+https://bridgeapps.medium.com/easy-kitty-theme-changer-cb944829b93a
+```
+
 A small TUI to list and apply [kitty](https://sw.kovidgoyal.net/kitty/) themes from `~/.config/kitty` (or `$KITTY_CONFIG_DIRECTORY`).
 
+Kitty is a high performance Terminal with really low CPU usage. 
+The problem this plugin solves is to be able to select different color themes to different tabs, easily without having to tweak with a conf file everytime.
+
+This is added under apache licence, so if anyone is interested to add any more features, do feel free to commit, I will review and confirm.
+
 ## Setup
+
+Checkout code first. There is just *main* branch
 
 On Debian/Ubuntu (and other PEP 668 systems) use a virtual environment:
 
@@ -24,8 +36,21 @@ From a kitty tab:
 Or use the helper script (creates `.venv` and installs deps if needed):
 
 ```bash
-./run
+./changeKittyTheme.sh
 ```
+### Usage Recommendation
+Once setup, Add this script to your .bashrc file, so that its easier to call from any new tab.
+
+```
+export PATH=[path to your changeKittyTheme.sh]:${PATH}
+```
+
+After opening a new Kitty tab / reloading your shell - just use changeKittyTheme to set up new theme everytime
+
+Enjoy !! 
+
+
+## How to Navigate 
 
 - **↑ / ↓** — move
 - **Enter** — apply selected theme
